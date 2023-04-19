@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myLayout">
+
+    <ImageView
+        android:id="@+id/flag_image_view"
+        android:layout_width="800dp"
+        android:layout_height="760dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/togo_flag" />
+
+    <View
+        android:id="@+id/chain_reaction_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/confet_view"
+        android:layout_width="600dp"
+        android:layout_height="500dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cft"
+        />
+
+    <ImageView
+        android:id="@+id/star1_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:src="@drawable/stars"
+        />
+
+    <ImageView
+        android:id="@+id/star2_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:src="@drawable/stars"
+        />
+
+    <ImageView
+        android:id="@+id/star3_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:src="@drawable/stars"
+        />
+
+</FrameLayout>
