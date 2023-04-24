@@ -27,11 +27,16 @@ class MainActivity : AppCompatActivity() {
         scope.cancel()
     }
 
+    override fun onStop() {
+        super.onStop()
+        stopConfettiAnimation()
+    }
+
     override fun onStart() {
         super.onStart()
 
         val imageView = findViewById<ImageView>(R.id.flag_image_view)
-        imageView.setImageResource(R.drawable.togo_flag)
+        imageView.setImageResource(R.drawable.flag)
 
         val flagAnimation = TranslateAnimation(
             Animation.RELATIVE_TO_SELF,
@@ -41,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             Animation.RELATIVE_TO_SELF,
             0f,
             Animation.RELATIVE_TO_SELF,
-            -0.1f
+            -0.03f
         ).apply {
             duration = 2000
             repeatCount = Animation.INFINITE
@@ -63,20 +68,7 @@ class MainActivity : AppCompatActivity() {
 
         imageView.startAnimation(rotationAnimation)*/
 
-        val flagDeformationAnimation = ObjectAnimator.ofFloat(
-            imageView,
-            "rotation",
-            -2f,
-            2f,
-            -1f,
-            1f,
-            0f
-        ).apply {
-            duration = 4500
-            repeatCount = ValueAnimator.INFINITE
-            repeatMode = ValueAnimator.REVERSE
-        }
-        flagDeformationAnimation.start()
+
 
         val confettiLayout = findViewById<FrameLayout>(R.id.myLayout)
 
@@ -84,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         val messageTextView = TextView(this)
         messageTextView.text = ""
         messageTextView.setTextColor(Color.WHITE)
-        messageTextView.textSize = 44f
+        messageTextView.textSize = 124f
         messageTextView.gravity = Gravity.CENTER
         messageTextView.visibility = View.INVISIBLE
         val messageParams = FrameLayout.LayoutParams(

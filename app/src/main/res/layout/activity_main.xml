@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="800dp"
             android:layout_height="800dp"
-            android:src="@drawable/togo_flag"
+            android:src="@drawable/flag"
             android:scaleType="centerCrop"
             android:layout_gravity="top"
             android:id="@+id/flag_image_view"
