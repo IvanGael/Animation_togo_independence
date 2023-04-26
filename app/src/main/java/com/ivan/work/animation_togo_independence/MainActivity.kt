@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
             Animation.RELATIVE_TO_SELF,
             -0.03f
         ).apply {
-            duration = 2000
+            duration = 1000
             repeatCount = Animation.INFINITE
             repeatMode = Animation.REVERSE
             interpolator = AccelerateDecelerateInterpolator()
@@ -74,9 +74,9 @@ class MainActivity : AppCompatActivity() {
 
         // Add the text view for the message
         val messageTextView = TextView(this)
-        messageTextView.text = ""
-        messageTextView.setTextColor(Color.WHITE)
-        messageTextView.textSize = 124f
+        messageTextView.text = " 63 \n Ans"
+        messageTextView.setTextColor(getColor(R.color.white))
+        messageTextView.textSize = 184f
         messageTextView.gravity = Gravity.CENTER
         messageTextView.visibility = View.INVISIBLE
         val messageParams = FrameLayout.LayoutParams(
@@ -154,9 +154,9 @@ class MainActivity : AppCompatActivity() {
 
                     // Create an ObjectAnimator for the messageTextView
                     val animator = ObjectAnimator.ofFloat(
-                        messageTextView, "translationY", 0f, -200f
+                        messageTextView, "translationX", 0f, -800f
                     ).apply {
-                        duration = 5000 // Set the duration of the animation
+                        duration = 15000 // Set the duration of the animation
                         repeatCount = Animation.INFINITE // Set the animation to repeat indefinitely
                         repeatMode = ValueAnimator.REVERSE // Set the animation to reverse when it repeats
                         interpolator = AccelerateDecelerateInterpolator() // Set an interpolator for the animation
